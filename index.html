@@ -42,17 +42,22 @@
 		    }
 		    .float:after{content:'';display:block;clear:both;height:0;overflow:hidden;visibility:hidden;}
 			.float{zoom:1;}
+			input{
+				-webkit-appearance:none;
+				outline:none;
+				border-radius: 0;
+			}
 		</style>
 	</head>
 	<body>
 		<!-- 搜索 -->
-		<div style='background:#0595d3;text-align:center;padding:2% 0px;position:fixed;top:0px;z-index:2;'>
-				<i class="layui-icon" style='border-bottom:1px solid;padding:5px;color:#fff;'>&#xe615;</i>
-				<input type='text' style='background:transparent;border:none;border-bottom:1px solid;padding:5px;margin-left:-5px;color:#fff;width:30%' placeholder='请输入商品名'/>
+		<div style='background:#0595d3;text-align:center;padding:11.5px 0px;position:fixed;top:0px;z-index:2;' class='search'>
+				<i class="layui-icon" style='color:#fff;'>&#xe615;</i>
+				<input type='text' style='background:transparent;border:none;border-bottom:1px solid;padding:5px;margin-left:-7px;color:#fff;width:40%' placeholder='请输入商品名'/>
 				<i class="layui-icon" style='position:absolute;right:5%;top:25%;font-size:20px;color:#fff'>&#xe63a;</i>
 		</div>
 		<!-- 轮播图 -->
-		<div class="swiper-container">
+		<div class="swiper-container" style='margin-top:50px'>
 			<div class="swiper-wrapper">
 				<img src='http://pic2.sc.chinaz.com/Files/pic/pic9/201801/zzpic9771_s.jpg' class="swiper-slide"/>
 				<img src='http://pic2.sc.chinaz.com/Files/pic/pic9/201802/bpic5717_s.jpg' class="swiper-slide"/>
@@ -154,6 +159,14 @@
 			</div>
 		</div>
 		<!-- 底部菜单 -->
+		<div>
+			<dl style='text-align:center;'>
+				<li style='width:25%;float:left;padding:15px 0px'>首页</li>
+				<li style='width:25%;float:left;padding:15px 0px'>预购</li>
+				<li style='width:25%;float:left;padding:15px 0px'>菜篮</li>
+				<li style='width:25%;float:left;padding:15px 0px'>我的</li>
+			</dl>
+		</div>
 	</body>
 	<script type="text/javascript" src="./Public/js/jquery-3.3.1.min.js"></script>
 	<script src="./Public/js/swiper.min.js"></script>
