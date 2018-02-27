@@ -29,7 +29,7 @@
 			<embed src="./home.html" style='width:100%;' class='content'/>
 		</div>
 		<!-- 底部菜单 -->
-		<div class='bottom_menu float' style='position:fixed;bottom:0px;padding:6px 0px;background:#ededed'>
+		<div class='bottom_menu float' style='position:fixed;bottom:0px;padding:8px 0px;background:#ededed'>
 			<dl style='text-align:center;'>
 				<dt style='width:20%;float:left;' page='home' class='active'>
 					<i class='layui-icon' style='display:block'>&#xe68e;</i>
@@ -58,7 +58,7 @@
 	<script src="./Public/js/layui.js"></script>
 	<script>
 		//设置内容高度
-		$('.content').css('height',$(document).height()-50);
+		$('.content').css('height',$(document).height()-60);
 		//切换页面
 		$('.bottom_menu dt').click(function (){
 			$('.bottom_menu .active').removeClass('active layui-anim layui-anim-scaleSpring');
