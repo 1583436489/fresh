@@ -8,7 +8,7 @@
 		<meta content="telephone=no" name="format-detection">
 		<meta content="email=no" name="format-detection">
 		<link rel="stylesheet" href="./Public/css/layui.css">
-		<title>登录</title>
+		<title>生鲜</title>
 	    <style type="text/css">
 	    	body,p,div{
 				width:100%;
@@ -35,9 +35,9 @@
 					<i class='layui-icon' style='display:block'>&#xe68e;</i>
 					首页
 				</dt>
-				<dt style='width:20%;float:left;' page='menu'>
+				<dt style='width:20%;float:left;' page='reserv'>
 					<i class='layui-icon' style='display:block'>&#xe65f;</i>
-					分类
+					预购
 				</dt>
 				<dt style='width:20%;float:left;' page='fx'>
 					<i class='layui-icon' style='display:block'>&#xe641;</i>
@@ -61,10 +61,13 @@
 		$('.content').css('height',$(document).height()-60);
 		//切换页面
 		$('.bottom_menu dt').click(function (){
-			$('.bottom_menu .active').removeClass('active layui-anim layui-anim-scaleSpring');
-			$(this).addClass('active layui-anim layui-anim-scaleSpring');
-			$('.content').remove();
-			$('.embed').html("<embed src='./"+$(this).attr('page')+".html' style='width:100%;height:"+($(document).height()-50)+"px' class='content'/>");
+			//避免页面重复加载
+			if($(this).attr('page')!=$('.bottom_menu .active').attr('page')){
+				$('.bottom_menu .active').removeClass('active layui-anim layui-anim-scaleSpring');
+				$(this).addClass('active layui-anim layui-anim-scaleSpring');
+				$('.content').remove();
+				$('.embed').html("<embed src='./"+$(this).attr('page')+".html' style='width:100%;height:"+($(document).height()-50)+"px' class='content'/>");
+			}
 		})
 	</script>
 </html>
