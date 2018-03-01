@@ -26,36 +26,141 @@
 			<span style='font-size:15px;line-height:31px'>我的菜篮</span>
 		</div>
 		<!-- 菜篮列表 -->
-		<div style='margin-top:42px;' class='shoppingList'>
-			<div style='margin:0 auto;padding:10px 0px;border:1px solid #ededed'>
+		<div style='margin-top:42px;margin-bottom:50px'>
+			<div style='margin:0 auto;padding:10px 0px;border-bottom:1px solid #ededed'>
 				<p style='text-align:right;width:95%;color:#dd6a61'>满50免运费，还差20元，快去凑单</p>
 			</div>
-			<div style='margin:10px auto'>
-				<div class='float' style='border-bottom:2px solid #ededed;'>
-					<div style='width:45%;'>
-						<i class="layui-icon" style='margin:0px 3%'>&#xe63f;</i>
-						<img lay-src='./Public/images/menu.jpg' style='width:150px;height:100px'/>
+			<!-- 商品列表 -->
+			<div class='float shoppingList' style='margin-top:10px;'>
+				<div class='float' style='border-bottom:2px solid #ededed;padding-bottom:10px;'>
+					<p style='float:left;margin:40px 5px;width:17px' class='icon'><i class="layui-icon" style='color:#0595d3' data-code='1'>&#xe643;</i></p>
+					<img lay-src='./Public/images/menu.jpg' style='width:130px;height:100px;float:left;'/>
+					<div style='float:left;width:30%;margin:7px 0px 0px 5px;'>
 						<p>商品名称</p>
-						<div class='float' style='position:relative;top:30px'>
-							<p style='float:left;width:50%'>￥7.9</p>
-							<p style='float:left;width:50%;text-align:center'>
-								<button style='width:20px;height:20px;border:1px solid #0595d3;border-radius:10px;color:#0595d3;background:#fff;'>-</button>
-								<span style='padding:0px 7px'>1</span>
-								<button style='width:20px;height:20px;border:none;border-radius:10px;background:#0595d3;color:#fff'>+</button>
-							</P>
-						</div>
+						<p style='float:left;margin-top:50px'>￥<span class='price'>7.9</span></p>
 					</div>
+					<p style='float:right;width:23%;text-align:center;margin-top:75px'>
+						<button style='width:20px;height:20px;border:1px solid #0595d3;border-radius:10px;color:#0595d3;background:#fff;' onclick='editNum(this,"1")'>-</button>
+						<input style='padding:0px 5px;width:20px;text-align:center' class='num' type='text' value='1'/>
+						<button style='width:20px;height:20px;border:none;border-radius:10px;background:#0595d3;color:#fff' onclick='editNum(this,"2")'>+</button>
+					</P>
 				</div>
+				<div class='float' style='border-bottom:2px solid #ededed;padding-bottom:10px;'>
+					<p style='float:left;margin:40px 5px;width:17px' class='icon'><i class="layui-icon" style='color:#0595d3' data-code='1'>&#xe643;</i></p>
+					<img lay-src='./Public/images/menu.jpg' style='width:130px;height:100px;float:left;'/>
+					<div style='float:left;width:30%;margin:7px 0px 0px 5px;'>
+						<p>商品名称</p>
+						<p style='float:left;margin-top:50px'>￥<span class='price'>6.9</span></p>
+					</div>
+					<p style='float:right;width:23%;text-align:center;margin-top:75px'>
+						<button style='width:20px;height:20px;border:1px solid #0595d3;border-radius:10px;color:#0595d3;background:#fff;' onclick='editNum(this,"1")'>-</button>
+						<input style='padding:0px 5px;width:20px;text-align:center' class='num' type='text' value='1'/>
+						<button style='width:20px;height:20px;border:none;border-radius:10px;background:#0595d3;color:#fff' onclick='editNum(this,"2")'>+</button>
+					</P>
+				</div>
+				<div class='float' style='border-bottom:2px solid #ededed;padding-bottom:10px;'>
+					<p style='float:left;margin:40px 5px;width:17px' class='icon'><i class="layui-icon" style='color:#0595d3' data-code='1'>&#xe643;</i></p>
+					<img lay-src='./Public/images/menu.jpg' style='width:130px;height:100px;float:left;'/>
+					<div style='float:left;width:30%;margin:7px 0px 0px 5px;'>
+						<p>商品名称</p>
+						<p style='float:left;margin-top:50px'>￥<span class='price'>5.9</span></p>
+					</div>
+					<p style='float:right;width:23%;text-align:center;margin-top:75px'>
+						<button style='width:20px;height:20px;border:1px solid #0595d3;border-radius:10px;color:#0595d3;background:#fff;' onclick='editNum(this,"1")'>-</button>
+						<input style='padding:0px 5px;width:20px;text-align:center' class='num' type='text' value='1'/>
+						<button style='width:20px;height:20px;border:none;border-radius:10px;background:#0595d3;color:#fff' onclick='editNum(this,"2")'>+</button>
+					</P>
+				</div>
+			</div>
+		</div>
+		<!-- 支付 -->
+		<div class='float' style='height:50px;position:fixed;bottom:0;border-bottom:3px solid #0595d3'>
+			<div class='float' style='width:60%;float:left;background:#ededed;'>
+				<p style='float:left;width:35%;line-height:50px;' class='allIcon'>
+					<i class="layui-icon" style='color:#0595d3;padding:0px 5px' data-code='1'>&#xe643;</i>
+					<span>全选</span>
+				</p>
+				<div style='float:left;width:65%;line-height:30px;'>
+					<p style='height:20px'>合计：￥<span class='allPrice'>150</span></p>
+					<p style='font-size:8px;height:20px'>运费：￥10</p>
+				</div>
+			</div>
+			<div style='width:40%;float:left;text-align:center;background:#0595d3;color:#fff;line-height:50px;'>
+				<span>去支付</span>
+				<i class="layui-icon">&#xe623;</i>
 			</div>
 		</div>
 	</body>
 	<script type="text/javascript" src="./Public/js/jquery-3.3.1.min.js"></script>
-	<script src="./Public/js/layui.js"></script>
+	<script src="./Public/js/layui/layui.js"></script>
 	<script>
 		layui.use('flow', function(){
 			var flow = layui.flow;
 			//当你执行这样一个方法时，即对页面中的全部带有lay-src的img元素开启了懒加载（当然你也可以指定相关img）
 			flow.lazyimg(); 
 		});
+		//选择按钮
+		$('.shoppingList .icon').click(function (){
+			if($(this).find('.layui-icon').attr('data-code')=='2'){
+				$(this).html("<i class='layui-icon' style='color:#0595d3' data-code='1'>&#xe643;</i>");
+			}else{
+				$(this).html("<i class='layui-icon' data-code='2'>&#xe63f;</i>");
+			}
+			//判断全选按钮显示状态
+			if($('.shoppingList .icon i[data-code="2"]').attr('data-code')==undefined){
+				$('.allIcon').html('<i class="layui-icon" style="color:#0595d3;padding:0px 5px" data-code="1">&#xe643;</i><span>全选</span>');
+			}else{
+				$('.allIcon').html('<i class="layui-icon" style="padding:0px 5px" data-code="2">&#xe63f;</i><span>全选</span>');
+			}
+			allPrice();//计算合计价格
+		})
+		//数量按钮
+		function editNum(obj,type){
+			var num=$(obj).parent('p').find('.num').val();
+			if(num<=1 && type==1){
+				showMsg('不能再减了！');
+				return false;
+			}
+			if(type==1){
+				num--;
+			}else{
+				num++;
+			}
+			$(obj).parent('p').find('.num').val(num);
+			allPrice();//计算合计价格
+		}
+		//弹出提示层
+		function showMsg(str){
+			layui.use('layer', function(){
+				var layer = layui.layer;
+				layer.msg(str,{
+					offset: ['80%'],
+					anim: 6,
+				    area:'60%',
+				});
+			});
+		}
+		//选择全选
+		$('.allIcon').click(function (){
+			if($('.allIcon .layui-icon').attr('data-code')==1){
+				$('.allIcon').html('<i class="layui-icon" style="padding:0px 5px" data-code="2">&#xe63f;</i><span>全选</span>');
+				$('.shoppingList .icon').html('<i class="layui-icon" data-code="2">&#xe63f;</i>');
+			}else{
+				$('.allIcon').html('<i class="layui-icon" style="color:#0595d3;padding:0px 5px" data-code="1">&#xe643;</i><span>全选</span>');
+				$('.shoppingList .icon').html('<i class="layui-icon" style="color:#0595d3;" data-code="1">&#xe643;</i>');
+			}
+			allPrice();//计算合计价格
+		})
+		//计算合计价格
+		allPrice();
+		function allPrice(){
+			var allPrice=0;
+			$('.shoppingList .float').each(function (k,v){
+				if($(v).find('.layui-icon').attr('data-code')==1){
+					allPrice+=parseFloat(($(v).find('.price').text())*($(v).find('.num').val()));
+				}
+			})
+			$('.allPrice').text(allPrice.toFixed(2));
+		}
 	</script>
 </html>

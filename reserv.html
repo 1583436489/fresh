@@ -28,7 +28,7 @@
 		</div>
 		<!-- 预购列表 -->
 		<div style='margin-top:42px;' class='reservList'>
-			<div class="layui-anim layui-anim-up">
+			<div>
 				<div class='float' style='width:95%;border-bottom:1px solid #ededed;margin:0 auto;padding:10px 0px'>
 					<div style='float:left;width:70%'>
 						<p>熏腊肉</p>
@@ -44,7 +44,7 @@
 			<i class='layui-icon' style='font-size:25px;padding:10px;border-radius:30px;color:#fff;background:#0595d3;position:fixed;bottom:50px;right:20px' onclick='view("addReserv")'>&#xe654;</i>
 		</div>
 		<!-- 预购下单 -->
-		<div style='margin-top:50px;display:none' class="layui-anim layui-anim-up addReserv">
+		<div style='margin-top:50px;display:none' class="addReserv">
 			<form class="layui-form" action="" style='width:80%;margin:0 auto'>
 		    	<div class="layui-form-item">
 				      <label class="layui-form-label" style='padding:9px 0px;text-align:left'>商品名：</label>
@@ -63,7 +63,7 @@
 		</div>
 	</body>
 	<script type="text/javascript" src="./Public/js/jquery-3.3.1.min.js"></script>
-	<script src="./Public/js/layui.js"></script>
+	<script src="./Public/js/layui/layui.js"></script>
 	<script>
 		function view(div){
 			$('.reservList').hide();
