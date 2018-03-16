@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -7,8 +8,9 @@
 		<meta content="black" name="apple-mobile-web-app-status-bar-style">
 		<meta content="telephone=no" name="format-detection">
 		<meta content="email=no" name="format-detection">
+		<title>首页</title>
+		<link rel="stylesheet" href="./Public/css/swiper.min.css">
 		<link rel="stylesheet" href="./Public/css/layui.css">
-		<title>生鲜</title>
 	    <style type="text/css">
 	    	body,p,div{
 				width:100%;
@@ -16,58 +18,164 @@
 			    margin:0;   /*去除外边距*/
 			    font-family:Helvetica;
 			}
-			.float:after{content:'';display:block;clear:both;height:0;overflow:hidden;visibility:hidden;}
+			.swiper-container{
+		      width: 100%;
+		      height: 150px;
+		    }
+		    .swiper-slide {
+		      text-align: center;
+		      font-size: 18px;
+		      background: #fff;
+		
+		      /* Center slide text vertically */
+		      display: -webkit-box;
+		      display: -ms-flexbox;
+		      display: -webkit-flex;
+		      display: flex;
+		      -webkit-box-pack: center;
+		      -ms-flex-pack: center;
+		      -webkit-justify-content: center;
+		      justify-content: center;
+		      -webkit-box-align: center;
+		      -ms-flex-align: center;
+		      -webkit-align-items: center;
+		      align-items: center;
+		    }
+		    .float:after{content:'';display:block;clear:both;height:0;overflow:hidden;visibility:hidden;}
 			.float{zoom:1;}
-			.active{
+			input{
+				-webkit-appearance:none;
+				outline:none;
+				border-radius: 0;
+			}
+			.menu_active{
 				color:#0595d3
 			}
 		</style>
 	</head>
 	<body>
-		<!-- 内容 -->
-		<div class='embed'>
-			<embed src="./home.html" style='width:100%;' class='content'/>
+		<!-- 搜索 -->
+		<div style='background:#0595d3;text-align:center;padding:13px 0px;position:fixed;top:0px;z-index:2;' class='search'>
+			<p style='width:50%;height:25px;background:#fff;margin:0 auto;line-height:25px;border-radius:10px'>
+				<i class="layui-icon">&#xe615;</i>
+				<span>输入搜索关键字</span>
+			</p>
+			<i class="layui-icon" style='position:absolute;right:5%;top:25%;font-size:20px;color:#fff'>&#xe63a;</i>
 		</div>
-		<!-- 底部菜单 -->
-		<div class='bottom_menu float' style='position:fixed;bottom:0px;padding:8px 0px;background:#ededed'>
-			<dl style='text-align:center;'>
-				<dt style='width:25%;float:left;' page='home' class='active'>
-					<i class='layui-icon' style='display:block'>&#xe68e;</i>
-					首页
-				</dt>
-				<dt style='width:25%;float:left;' page='reserv'>
-					<i class='layui-icon' style='display:block'>&#xe65f;</i>
-					预购
-				</dt>
-				<!-- <dt style='width:20%;float:left;' page='fx'>
-					<i class='layui-icon' style='display:block'>&#xe641;</i>
-					乐淘
-				</dt> -->
-				<dt style='width:25%;float:left;' page='shoppingCar'>
-					<i class='layui-icon' style='display:block'>&#xe657;</i>
-					菜篮
-				</dt>
-				<dt style='width:25%;float:left;' page='user'>
-					<i class='layui-icon' style='display:block'>&#xe612;</i>
-					我的
-				</dt>
-			</dl>
+		<!-- 分类 -->
+		<div class='float'>
+			<div class='swiper-container swiper-menu' style='padding-top:53px;height:30px;width:93%;float:left'>
+				<div class="swiper-wrapper" style='z-index:-1;'>
+					<div class="swiper-slide menu_active" style='font-size:16px'>精选</div>
+					<div class="swiper-slide" style='font-size:16px'>时令水果</div>
+					<div class="swiper-slide" style='font-size:16px'>新鲜蔬菜</div>
+					<div class="swiper-slide" style='font-size:16px'>肉类禽蛋</div>
+					<div class="swiper-slide" style='font-size:16px'>海鲜水产</div>
+					<div class="swiper-slide" style='font-size:16px'>时令水果</div>
+					<div class="swiper-slide" style='font-size:16px'>肉类禽蛋</div>
+				</div>
+			</div>
+			<i class="layui-icon get_menu" style='float:right;margin-top:58px;width:7%;text-align:center;background:#fff'>&#xe671;</i>
 		</div>
+		<!-- 轮播图 -->
+		<div class="swiper-container swiper-imgs">
+			<div class="swiper-wrapper">
+				<img lay-src='http://pic2.sc.chinaz.com/Files/pic/pic9/201801/zzpic9771_s.jpg' class="swiper-slide"/>
+				<img lay-src='http://pic2.sc.chinaz.com/Files/pic/pic9/201802/bpic5717_s.jpg' class="swiper-slide"/>
+				<img lay-src='http://pic1.sc.chinaz.com/Files/pic/pic9/201801/zzpic9994_s.jpg' class="swiper-slide"/>
+				<img lay-src='http://pic.sc.chinaz.com/Files/pic/pic9/201801/bpic5426_s.jpg' class="swiper-slide"/>
+			</div>
+			<div class="swiper-pagination"></div>
+		</div>
+		<!-- 商品 -->
+		<div style='margin-bottom:55px'>
+			<div class='float'>
+				<p style='width:50%;height:40px;background:#f3f3f4;line-height:40px;text-align:center;color:#0595d3;margin:10px auto;border-radius:10px'><i class="layui-icon">&#xe625;</i>今日推荐</p>
+				<div style='float:left;width:30%;margin-left:2.5%'>
+					<img lay-src='./Public/images/menu.jpg' style='width:100%;border-radius:100%'/>
+					<p style='width:100%;text-align:center;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;'>新鲜水果</p>
+				</div>
+				<div style='float:left;width:30%;margin-left:2.5%'>
+					<img lay-src='./Public/images/menu.jpg' style='width:100%;border-radius:100%'/>
+					<p style='width:100%;text-align:center;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;'>新鲜蔬菜</p>
+				</div>
+				<div style='float:left;width:30%;margin-left:2.5%'>
+					<img lay-src='./Public/images/menu.jpg' style='width:100%;border-radius:100%'/>
+					<p style='width:100%;text-align:center;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;'>肉类禽蛋</p>
+				</div>
+				<div style='float:left;width:30%;margin-left:2.5%'>
+					<img lay-src='./Public/images/menu.jpg' style='width:100%;border-radius:100%'/>
+					<p style='width:100%;text-align:center;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;'>时令水果</p>
+				</div>
+				<div style='float:left;width:30%;margin-left:2.5%'>
+					<img lay-src='./Public/images/menu.jpg' style='width:100%;border-radius:100%'/>
+					<p style='width:100%;text-align:center;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;'>新鲜蔬菜</p>
+				</div>
+				<div style='float:left;width:30%;margin-left:2.5%'>
+					<img lay-src='./Public/images/menu.jpg' style='width:100%;border-radius:100%'/>
+					<p style='width:100%;text-align:center;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;'>肉类禽蛋</p>
+				</div>
+			</div>
+			<div class='float'>
+				<p style='width:50%;height:40px;background:#f3f3f4;line-height:40px;text-align:center;color:#0595d3;margin:10px auto;border-radius:10px'><i class="layui-icon">&#xe625;</i>大家都在选</p>
+				<div style='float:left;width:30%;margin-left:2.5%'>
+					<img lay-src='./Public/images/menu.jpg' style='width:100%;border-radius:100%'/>
+					<p style='width:100%;text-align:center;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;'>新鲜水果</p>
+				</div>
+				<div style='float:left;width:30%;margin-left:2.5%'>
+					<img lay-src='./Public/images/menu.jpg' style='width:100%;border-radius:100%'/>
+					<p style='width:100%;text-align:center;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;'>新鲜蔬菜</p>
+				</div>
+				<div style='float:left;width:30%;margin-left:2.5%'>
+					<img lay-src='./Public/images/menu.jpg' style='width:100%;border-radius:100%'/>
+					<p style='width:100%;text-align:center;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;'>肉类禽蛋</p>
+				</div>
+				<div style='float:left;width:30%;margin-left:2.5%'>
+					<img lay-src='./Public/images/menu.jpg' style='width:100%;border-radius:100%'/>
+					<p style='width:100%;text-align:center;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;'>时令水果</p>
+				</div>
+				<div style='float:left;width:30%;margin-left:2.5%'>
+					<img lay-src='./Public/images/menu.jpg' style='width:100%;border-radius:100%'/>
+					<p style='width:100%;text-align:center;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;'>新鲜蔬菜</p>
+				</div>
+				<div style='float:left;width:30%;margin-left:2.5%'>
+					<img lay-src='./Public/images/menu.jpg' style='width:100%;border-radius:100%'/>
+					<p style='width:100%;text-align:center;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;'>肉类禽蛋</p>
+				</div>
+			</div>
+		</div>
+		<!-- 底部 -->
+		<embed src='./button.html' style='width:100%;height:53px;position:fixed;bottom:0px;'/>
 	</body>
 	<script type="text/javascript" src="./Public/js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="./Public/js/common.js"></script>
+	<script src="./Public/js/swiper.min.js"></script>
 	<script src="./Public/js/layui/layui.js"></script>
 	<script>
-		//设置内容高度
-		$('.content').css('height',$(document).height()-60);
-		//切换页面
-		$('.bottom_menu dt').click(function (){
-			//避免页面重复加载
-			if($(this).attr('page')!=$('.bottom_menu .active').attr('page')){
-				$('.bottom_menu .active').removeClass('active layui-anim layui-anim-scaleSpring');
-				$(this).addClass('active layui-anim layui-anim-scaleSpring');
-				$('.content').remove();
-				$('.embed').html("<embed src='./"+$(this).attr('page')+".html' style='width:100%;height:"+($(document).height()-50)+"px' class='content'/>");
+		$('#index').css('color','#0595d3');
+		new Swiper('.swiper-imgs', {
+				speed:2000,
+				autoplay: {
+					delay: 3000,
+				},
+				loop:true, 
+			  	pagination: {
+				    el: '.swiper-pagination',
+				    dynamicBullets:true
+		     	},
+				observer: true,//修改swiper自己或子元素时，自动初始化swiper
+				observeParents: true//修改swiper的父元素时，自动初始化swiper	
 			}
+	    );
+		new Swiper('.swiper-menu',{
+			slidesPerView:4,
+			spaceBetween : 0,
+			freeMode: true,
 		})
+		layui.use('flow', function(){
+			var flow = layui.flow;
+			//当你执行这样一个方法时，即对页面中的全部带有lay-src的img元素开启了懒加载（当然你也可以指定相关img）
+			flow.lazyimg(); 
+		});
 	</script>
 </html>
