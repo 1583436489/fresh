@@ -22,13 +22,13 @@
 	</head>
 	<body>
 		<!-- 头部 -->
-		<div class='float' style='background:#0595d3;text-align:center;padding:5px 0px;position:fixed;top:0px;z-index:2;color:#fff'>
-			<span style='font-size:15px;line-height:31px'>预购商品</span>
-			<p style='float:right;width:30px;font-size:10px;margin-right:5%'>预购说明</p>
+		<div class='float' style='background:#0595d3;text-align:center;padding:7px 0px;position:fixed;top:0px;z-index:2;color:#fff'>
+			<span style='font-size:16px;line-height:37px;float:center;font-weight:bold'>预购商品</span>
+			<p style='float:right;width:28px;font-size:12px;margin:0px 15px'>预购说明</p>
 		</div>
 		<div style='margin-bottom:55px'>
 			<!-- 预购列表 -->
-			<div style='margin-top:42px;' class='reservList'>
+			<div style='margin-top:50px;' class='reservList'>
 				<div>
 					<div class='float' style='width:95%;border-bottom:1px solid #ededed;margin:0 auto;padding:10px 0px'>
 						<div style='float:left;width:70%'>
@@ -42,7 +42,7 @@
 					</div>
 				</div>
 				<!-- 添加预购 -->
-				<i class='layui-icon' style='font-size:25px;padding:10px;border-radius:30px;color:#fff;background:#0595d3;position:fixed;bottom:50px;right:20px' onclick='view("addReserv")'>&#xe654;</i>
+				<i class='layui-icon' style='font-size:25px;padding:10px;border-radius:30px;color:#fff;background:#0595d3;position:fixed;bottom:60px;right:20px' onclick='view("addReserv")'>&#xe654;</i>
 			</div>
 			<!-- 预购下单 -->
 			<div style='margin-top:50px;display:none' class="addReserv">
@@ -64,13 +64,12 @@
 			</div>
 		</div>
 		<!-- 底部 -->
-		<embed src='./button.html' style='width:100%;height:53px;position:fixed;bottom:0px;'/>
+		<embed src='./button.html#reserv' style='width:100%;height:53px;position:fixed;bottom:0px;'/>
 	</body>
 	<script type="text/javascript" src="./Public/js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="./Public/js/Common.js"></script>
 	<script src="./Public/js/layui/layui.js"></script>
 	<script>
-		setPageIndex('reserv');
 		function view(div){
 			$('.reservList').hide();
 			$('.addReserv').hide();

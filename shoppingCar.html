@@ -22,11 +22,11 @@
 	</head>
 	<body>
 		<!-- 头部 -->
-		<div style='background:#0595d3;text-align:center;padding:5px 0px;position:fixed;top:0px;z-index:2;color:#fff'>
-			<span style='font-size:15px;line-height:31px'>我的菜篮</span>
+		<div style='background:#0595d3;text-align:center;padding:10px 0px;position:fixed;top:0px;z-index:2;color:#fff'>
+			<span style='font-size:16px;line-height:31px;font-weight:bold'>我的菜篮</span>
 		</div>
 		<!-- 菜篮列表 -->
-		<div style='margin-top:42px;margin-bottom:50px'>
+		<div style='margin-top:42px;margin-bottom:100px'>
 			<div style='margin:0 auto;padding:10px 0px;border-bottom:1px solid #ededed'>
 				<p style='text-align:right;width:95%;color:#dd6a61'>满50免运费，还差20元，快去凑单</p>
 			</div>
@@ -71,10 +71,23 @@
 						<button style='width:20px;height:20px;border:none;border-radius:10px;background:#0595d3;color:#fff' onclick='editNum(this,"2")'>+</button>
 					</P>
 				</div>
+				<div class='float' style='border-bottom:2px solid #ededed;padding-bottom:10px;'>
+					<p style='float:left;margin:40px 5px;width:17px' class='icon'><i class="layui-icon" style='color:#0595d3' data-code='1'>&#xe643;</i></p>
+					<img lay-src='./Public/images/menu.jpg' style='width:130px;height:100px;float:left;'/>
+					<div style='float:left;width:30%;margin:7px 0px 0px 5px;'>
+						<p>商品名称</p>
+						<p style='float:left;margin-top:50px'>￥<span class='price'>5.9</span></p>
+					</div>
+					<p style='float:right;width:23%;text-align:center;margin-top:75px'>
+						<button style='width:20px;height:20px;border:1px solid #0595d3;border-radius:10px;color:#0595d3;background:#fff;' onclick='editNum(this,"1")'>-</button>
+						<input style='padding:0px 5px;width:20px;text-align:center' class='num' type='text' value='1'/>
+						<button style='width:20px;height:20px;border:none;border-radius:10px;background:#0595d3;color:#fff' onclick='editNum(this,"2")'>+</button>
+					</P>
+				</div>
 			</div>
 		</div>
 		<!-- 支付 -->
-		<div class='float' style='height:50px;position:fixed;bottom:0;border-bottom:3px solid #0595d3'>
+		<div class='float' style='height:50px;position:fixed;bottom:53px;border-bottom:3px solid #0595d3'>
 			<div class='float' style='width:60%;float:left;background:#ededed;'>
 				<p style='float:left;width:35%;line-height:50px;' class='allIcon'>
 					<i class="layui-icon" style='color:#0595d3;padding:0px 5px' data-code='1'>&#xe643;</i>
@@ -82,7 +95,7 @@
 				</p>
 				<div style='float:left;width:65%;line-height:30px;'>
 					<p style='height:20px'>合计：￥<span class='allPrice'>150</span></p>
-					<p style='font-size:8px;height:20px'>运费：￥10</p>
+					<p style='font-size:13px;height:20px'>运费：￥10</p>
 				</div>
 			</div>
 			<div style='width:40%;float:left;text-align:center;background:#0595d3;color:#fff;line-height:50px;'>
@@ -90,6 +103,8 @@
 				<i class="layui-icon">&#xe623;</i>
 			</div>
 		</div>
+		<!-- 底部 -->
+		<embed src='./button.html#shopping' style='width:100%;height:53px;position:fixed;bottom:0px;'/>
 	</body>
 	<script type="text/javascript" src="./Public/js/jquery-3.3.1.min.js"></script>
 	<script src="./Public/js/layui/layui.js"></script>

@@ -18,9 +18,6 @@
 			}
 			.float:after{content:'';display:block;clear:both;height:0;overflow:hidden;visibility:hidden;}
 			.float{zoom:1;}
-			.active{
-				color:#0595d3
-			}
 		</style>
 	</head>
 	<body>
@@ -51,12 +48,13 @@
 		</div>
 	</body>
 	<script type="text/javascript" src="./Public/js/jquery-3.3.1.min.js"></script>
-	<script type="text/javascript" src="./Public/js/Common.js"></script>
 	<script>
 		$('dt').click(function (){
 			if($('.active').attr('id') != $(this).attr('id')){
 				window.parent.location.href='./'+$(this).attr('id')+'.html';
 			}
 		})
+		//根据地址栏判断当前导航位置
+		$(window.location.hash).css('color','#0595d3');
 	</script>
 </html>
