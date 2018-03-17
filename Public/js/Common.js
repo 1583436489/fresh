@@ -1,7 +1,7 @@
 /**
  * 当前位置
  */
-var pageIndex='index';
 function setPageIndex(index){
-	pageIndex=index;
+	$('.active').removeClass('active');
+	$('#'+index).addClass('active');
 }
