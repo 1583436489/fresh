@@ -7,8 +7,9 @@
 		<meta content="black" name="apple-mobile-web-app-status-bar-style">
 		<meta content="telephone=no" name="format-detection">
 		<meta content="email=no" name="format-detection">
+		<title>首页</title>
+		<link rel="stylesheet" href="./Public/css/swiper.min.css">
 		<link rel="stylesheet" href="./Public/css/layui.css">
-		<title>生鲜</title>
 	    <style type="text/css">
 	    	body,p,div{
 				width:100%;
@@ -16,20 +17,66 @@
 			    margin:0;   /*去除外边距*/
 			    font-family:Helvetica;
 			}
-			.float:after{content:'';display:block;clear:both;height:0;overflow:hidden;visibility:hidden;}
+		    .float:after{content:'';display:block;clear:both;height:0;overflow:hidden;visibility:hidden;}
 			.float{zoom:1;}
+			ul li{
+				list-style-type:none;
+			}
+			/* .active{
+				color:#0595d3;
+				border-bottom:1px solid #0595d3;
+			} */
 		</style>
 	</head>
 	<body>
-		<!-- 头像 -->
-		<div style='margin:0 auto'>
-			<div>
-				<img lay-src='./Public/images/menu.jpg' style='width:50px;height:50px'/>
-			</div>
+		<!-- 头部 -->
+		<div style='background:#0595d3;text-align:center;padding:10px 0px;position:fixed;top:0px;z-index:2;color:#fff'>
+			<span style='font-size:16px;line-height:31px;font-weight:bold'>我的</span>
 		</div>
+		<!-- 头像 -->
+		<div style='height:150px;text-align:center;padding-top:20%'>
+			<img src='http://img2.woyaogexing.com/2018/03/16/768643a31922df6f!400x400_big.jpg' style='width:30%'/>
+			<p>低年级</p>
+		</div>
+		<!-- 物流栏 -->
+		<div style='border-bottom:8px solid #ededed'>
+			<p style='padding:3% 0px;font-size:17px;border-top:8px solid #ededed;border-bottom:1px solid #ededed'><span style='padding-left:5%;'>我的订单</span></p>
+			<ul class='float' style='text-align:center'>
+				<li style='float:left;width:20%;padding:13px 0px'>
+					<i class='layui-icon' style='display:block'>&#xe65e;</i>
+					待支付
+				</li>
+				<li style='float:left;width:20%;padding:13px 0px'>
+					<i class='layui-icon' style='display:block'>&#xe622;</i>
+					待发货
+				</li>
+				<li style='float:left;width:20%;padding:13px 0px'>
+					<i class='layui-icon' style='display:block'>&#xe698;</i>
+					待收货
+				</li>
+				<li style='float:left;width:20%;padding:13px 0px'>
+					<i class='layui-icon' style='display:block'>&#xe642;</i>
+					待评价
+				</li>
+				<li style='float:left;width:20%;padding:13px 0px'>
+					<i class='layui-icon' style='display:block'>&#xe606;</i>
+					售后
+				</li>
+			</ul>
+		</div>
+		<div>
+			<ul>
+				<li style='border-top:1px solid #ededed;border-bottom:1px solid #ededed;padding:4% 0%;'><span style='padding-left:5%;font-size:16px'>我的收货地址</span></li>
+				<li style='border-top:1px solid #ededed;border-bottom:1px solid #ededed;padding:4% 0%;'><span style='padding-left:5%;font-size:15px'>客服帮助</span></li>
+				<li style='border-top:1px solid #ededed;border-bottom:1px solid #ededed;padding:4% 0%;'><span style='padding-left:5%;font-size:14px'>意见反馈</span></li>
+				<li style='border-top:1px solid #ededed;border-bottom:1px solid #ededed;padding:4% 0%;'><span style='padding-left:5%;font-size:13px'>设置</span></li>
+			</ul>
+		</div>
+		<!-- 底部 -->
+		<embed src='./button.html#user' id='button' style='width:100%;height:53px;position:fixed;bottom:0px;'/>
 	</body>
 	<script type="text/javascript" src="./Public/js/jquery-3.3.1.min.js"></script>
-	<script src="./Public/js/layui/layui.js"></script>
+	<script type="text/javascript" src="./Public/js/Common.js"></script>
 	<script>
 		
 	</script>
